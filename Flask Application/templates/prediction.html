@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Team1-Prediction-Classification</title>
+
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--header start-->
+    <div id="headerdiv">
+            <div class="row">
+                <h1>Predictive And Classification Modelling</h1>
+            </div>
+    </div>
+    <!--header end-->
+    <!--Wrapper Div-->
+    <div id="mainbody">
+        <!--Body Wrapper starts-->
+            <!--Sidebar start-->
+            <div id="sidebar">
+                <ul class="nav nav-pills nav-stacked">
+                  <li role="presentation" class="active"><a href="#">Prediction</a></li>
+                  <li role="presentation"><a href="classification">Classification</a></li>
+                </ul>
+            </div>
+            <!--Sidebar end-->
+            <!-- Prediction-->
+
+            <div id="bodydivwrapper" class ="row">
+                <!--
+                <div id="nameInput" class="input-group-lg center-block helloInput">
+                    <p class="lead">What is your name?</p>
+                    <input id="user_name" type="text" class="form-control" placeholder="name" aria-describedby="sizing-addon1" value="" />
+                </div>
+                <p id="response" class="lead text-center"></p>
+
+                <p id="databaseNames" class="lead text-center"></p>
+                -->
+                
+                <div id="bodydiv">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div id="databaseNames" class="lead text-left">
+                                Credit Score
+                                <input id="frm_credit_score" type="text" class="form-control" placeholder="" value="" />
+                                First Time Home Buyer
+                                <p>
+                                <label class="radio-inline"><input type="radio" name="frm_first_time_home_buyer" value="Y"/>Yes</label>
+                                <label class="radio-inline"><input type="radio" name="frm_first_time_home_buyer" value="N"/>No</label>
+                                <label class="radio-inline"><input type="radio" name="frm_first_time_home_buyer" value="X" checked/>N/A</label>
+                                </p>
+                                Origniation UPB
+                                <input id="frm_og_upb" type="text" class="form-control" placeholder="" value="" />
+                                Loan Term
+                                <input id="frm_loan_term" type="text" class="form-control" placeholder="" value="" />
+                                Origination Quarter And Year
+                                <div class="yeardivs">
+                                    <div>
+                                        <select id="frm_og_quarter" name="frm_og_quarter" class="form-control">
+                                            <option value="Q1">Q1</option>
+                                            <option value="Q2">Q2</option>
+                                            <option value="Q3">Q3</option>
+                                            <option value="Q4">Q4</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <select id="frm_og_year" name="frm_og_year" class="form-control">
+                                            <option value="1999">1999</option>
+                                            <option value="2000">2000</option>
+                                            <option value="2001">2001</option>
+                                            <option value="2002">2002</option>
+                                            <option value="2003">2003</option>
+                                            <option value="2004">2004</option>
+                                            <option value="2005">2005</option>
+                                            <option value="2006">2006</option>
+                                            <option value="2007">2007</option>
+                                            <option value="2008">2008</option>
+                                            <option value="2009">2009</option>
+                                            <option value="2010">2010</option>
+                                            <option value="2011">2011</option>
+                                            <option value="2012">2012</option>
+                                            <option value="2013">2013</option>
+                                            <option value="2014">2014</option>
+                                            <option value="2015">2015</option>
+                                            <option value="2016">2016</option>
+                                        </select>
+                                    </div>
+                                    
+                                </div>
+                                
+                                Seller Name
+                                <select id="frm_seller_name" name="frm_seller_name" class="form-control">
+                                    <option value="Other sellers" selected>Other sellers</option>
+                                    <option value="WELLSFARGOBANK,NA">WELLSFARGOBANK,NA</option>
+                                    <option value="WELLSFARGOHOMEMORTGA">WELLSFARGOHOMEMORTGA</option>
+                                    <option value="USBANKNA">USBANKNA</option>
+                                    <option value="BANKOFAMERICA,NA">BANKOFAMERICA,NA</option>
+                                    <option value="ABNAMROMTGEGROUP,INC">ABNAMROMTGEGROUP,INC</option>
+                                    <option value="BRANCHBANKING&TRUSTC">BRANCHBANKING&TRUSTC</option>
+                                    <option value="CHASEHOMEFINANCELLC">CHASEHOMEFINANCELLC</option>
+                                    <option value="COUNTRYWIDE">COUNTRYWIDE</option>
+                                    <option value="NATLCITYMTGECO">NATLCITYMTGECO</option>
+                                    <option value="JPMORGANCHASEBANK,NA">JPMORGANCHASEBANK,NA</option>
+                                    <option value="PROVIDENTFUNDINGASSO">PROVIDENTFUNDINGASSO</option>
+                                    <option value="WASHINGTONMUTUALBANK">WASHINGTONMUTUALBANK</option>
+                                    <option value="PRINCIPALRESIDENTIAL">PRINCIPALRESIDENTIAL</option>
+                                    <option value="CHASEMANHATTANMTGECO">CHASEMANHATTANMTGECO</option>
+                                    <option value="CITIMORTGAGE,INC">CITIMORTGAGE,INC</option>
+                                    <option value="FIFTHTHIRDBANK">FIFTHTHIRDBANK</option>
+                                    <option value="TAYLOR,BEAN&WHITAKER">TAYLOR,BEAN&WHITAKER</option>
+                                    <option value="SUNTRUSTMORTGAGE,INC">SUNTRUSTMORTGAGE,INC</option>
+                                    <option value="GMACMORTGAGE,LLC">GMACMORTGAGE,LLC</option>
+                                    <option value="QUICKENLOANINC">QUICKENLOANINC</option>
+                                    <option value="NORWEST MORTGAGE, IN">NORWEST MORTGAGE, IN</option>
+                                    <option value="FLAGSTARBANK,FSB">FLAGSTARBANK,FSB</option>
+                                    <option value="NORWESTMORTGAGE,INC">NORWESTMORTGAGE,INC</option>
+                                    <option value="METLIFEHOMELOANS,ADI">METLIFEHOMELOANS,ADI</option>
+                                    <option value="GMACMTGECORP">GMACMTGECORP</option>
+                                    <option value="CALIBERHOMELOANS,INC">CALIBERHOMELOANS,INC</option>
+                                    <option value="FRANKLINAMERICANMTGE">FRANKLINAMERICANMTGE</option>
+                                    <option value="PHHMTGECORP">PHHMTGECORP</option>
+                                    <option value="UNITEDSHOREFINANCIAL">UNITEDSHOREFINANCIAL</option>
+                                    <option value="PENNYMACCORP">PENNYMACCORP</option>
+                                    <option value="GUARANTEEDRATE,INC">GUARANTEEDRATE,INC</option>
+                                    <option value="LOANDEPOTCOM,LLC">LOANDEPOTCOM,LLC</option>
+                                    <option value="FIRSTARBANK,NA">FIRSTARBANK,NA</option>
+                                    <option value="FIRSTHORIZONHOMELOAN">FIRSTHORIZONHOMELOAN</option>
+                                    <option value="OLDKENTMTGECO">OLDKENTMTGECO</option>
+                                    <option value="STEARNSLENDING,LLC">STEARNSLENDING,LLC</option>
+                                    <option value="ABN AMRO MORTGAGE GR">ABN AMRO MORTGAGE GR</option>
+                                    <option value="AMTRUSTBANK">AMTRUSTBANK</option>
+                                    <option value="COUNTRYWIDE HOME LOA">COUNTRYWIDE HOME LOA</option>
+                                    <option value="FLAGSTARCAPITALMARKE">FLAGSTARCAPITALMARKE</option>
+                                    <option value="UNIONSAVINGSBANK">UNIONSAVINGSBANK</option>
+                                    <option value="PNCMTGECORPOFAMERICA">PNCMTGECORPOFAMERICA</option>
+                                    <option value="GMACMORTGAGE,LLCFORP">GMACMORTGAGE,LLCFORP</option>
+                                    <option value="AMERIHOMEMTGECOMPANY">AMERIHOMEMTGECOMPANY</option>
+                                    <option value="FLAGSTAR BANK, FSB">FLAGSTAR BANK, FSB</option>
+                                    <option value="BISHOPSGATERESIDENTI">BISHOPSGATERESIDENTI</option>
+                                    <option value="HSBCMTGECORPUSA">HSBCMTGECORPUSA</option>
+                                    <option value="CROSSLANDMTGECORP">CROSSLANDMTGECORP</option>
+                                    <option value="NATIONSBANC MORTGAGE">NATIONSBANC MORTGAGE</option>
+                                    <option value="CROSSLAND MORTGAGE C">CROSSLAND MORTGAGE C</option>
+                                    <option value="PRINCIPAL RESIDENTIA">PRINCIPAL RESIDENTIA</option>
+                                    <option value="FIRST UNION CAPITAL">FIRST UNION CAPITAL</option>
+                                    <option value="STONEGATEMTGECORP">STONEGATEMTGECORP</option>
+                                    <option value="PNC MORTGAGE CORPORA">PNC MORTGAGE CORPORA</option>
+                                    <option value="STEARNSLENDING,INC">STEARNSLENDING,INC</option>
+                                    <option value="FAIRWAYINDEPENDENTMT">FAIRWAYINDEPENDENTMT</option>
+                                    <option value="OLD KENT MORTGAGE CO">OLD KENT MORTGAGE CO</option>
+                                    <option value="CHASE MANHATTAN MORT">CHASE MANHATTAN MORT</option>
+                                    <option value="STANDARD FEDERAL BAN">STANDARD FEDERAL BAN</option>
+                                    <option value="FREMONTBANK">FREMONTBANK</option>
+                                    <option value="SOVEREIGNBANK">SOVEREIGNBANK</option>
+                                    <option value="BANK OF AMERICA, N.A">BANK OF AMERICA, N.A</option>
+                                    <option value="ABNAMRO,NKACITIMORTG">ABNAMRO,NKACITIMORTG</option>
+                                    <option value="GREENLIGHTFINANCIALS">GREENLIGHTFINANCIALS</option>
+                                    <option value="PRIMELENDING,APLAINS">PRIMELENDING,APLAINS</option>
+                                    <option value="NATIONAL CITY MORTGA">NATIONAL CITY MORTGA</option>
+                                    <option value="CALIBERFUNDINGLLC">CALIBERFUNDINGLLC</option>
+                                    <option value="FLEET MORTGAGE CORPO">FLEET MORTGAGE CORPO</option>
+                                    <option value="FT MORTGAGE COMPANIE">FT MORTGAGE COMPANIE</option>
+                                    <option value="BANKAMERICA MORTGAGE">BANKAMERICA MORTGAGE</option>
+                                    <option value="BISHOP'S GATE RESIDE">BISHOP'S GATE RESIDE</option>
+                                    <option value="WACHOVIAMORTGAGE,FSB">WACHOVIAMORTGAGE,FSB</option>
+                                    <option value="WASHINGTON MUTUAL BA">WASHINGTON MUTUAL BA</option>
+                                    <option value="NAMCO ASSET MANAGEME">NAMCO ASSET MANAGEME</option>
+                                    <option value="G N MORTGAGE CORPORA">G N MORTGAGE CORPORA</option>
+                                    <option value="ACCUBANC MORTGAGE CO">ACCUBANC MORTGAGE CO</option>
+                                    <option value="COLORADOFEDSAVINGSBA">COLORADOFEDSAVINGSBA</option>
+                                    <option value="CMGMORTGAGE,INC">CMGMORTGAGE,INC</option>
+                                    <option value="USAAFEDSAVINGSBANK">USAAFEDSAVINGSBANK</option>
+                                    <option value="FIFTHTHIRDMTGECO">FIFTHTHIRDMTGECO</option>
+                                    <option value="CHICAGOMTGESOLUTIONS">CHICAGOMTGESOLUTIONS</option>
+                                    <option value="COLETAYLORBANK">COLETAYLORBANK</option>
+                                    <option value="GE CAPITAL MORTGAGE">GE CAPITAL MORTGAGE</option>
+                                    <option value="GMAC MORTGAGE CORPOR">GMAC MORTGAGE CORPOR</option>
+                                    <option value="NATIONSBANK, N.A.,DB">NATIONSBANK, N.A.,DB</option>
+                                    <option value="HOMESIDE LENDING, IN">HOMESIDE LENDING, IN</option>
+                                    <option value="FTMTGECOMPANIES">FTMTGECOMPANIES</option>
+                                    <option value="FIRST UNION MORTGAGE">FIRST UNION MORTGAGE</option>
+                                    <option value="FIRSTAR BANK, N.A.">FIRSTAR BANK, N.A.</option>
+                                    <option value="PACIFICUNIONFINANCIA">PACIFICUNIONFINANCIA</option>
+                                    <option value="NATIONSBANK, N.A.">NATIONSBANK, N.A.</option>
+                                    <option value="ALLYBANK">ALLYBANK</option>
+                                    <option value="RESOURCE BANCSHARES">RESOURCE BANCSHARES</option>
+                                    <option value="IMPACMTGECORP">IMPACMTGECORP</option>
+                                    <option value="NATLCITYBANK">NATLCITYBANK</option>
+                                    <option value="GECAPITALMTGESERVICE">GECAPITALMTGESERVICE</option>
+                                    <option value="REGIONSBANKDBAREGION">REGIONSBANKDBAREGION</option>
+                                    <option value="NYCBMTGECOMPANY,LLC">NYCBMTGECOMPANY,LLC</option>
+                                    <option value="GNMTGECORP">GNMTGECORP</option>
+                                    <option value="PROSPECTMORTGAGE,LLC">PROSPECTMORTGAGE,LLC</option>
+                                    <option value="REDWOODRESIDENTIALAC">REDWOODRESIDENTIALAC</option>
+                                    <option value="CRESTAR MORTGAGE COR">CRESTAR MORTGAGE COR</option>
+                                    <option value="PLAZAHOMEMORTGAGE,IN">PLAZAHOMEMORTGAGE,IN</option>
+                                </select>
+                                
+                                Servicer Name
+                                <select id="frm_servicer_name" name="frm_servicer_name" class="form-control">
+                                    <option value="Other servicers" selected>Other servicers</option>
+                                    <option value="WELLSFARGOBANK,NA">WELLSFARGOBANK,NA</option>
+                                    <option value="JPMORGANCHASEBANK,NA">JPMORGANCHASEBANK,NA</option>
+                                    <option value="BANKOFAMERICA,NA">BANKOFAMERICA,NA</option>
+                                    <option value="USBANKNA">USBANKNA</option>
+                                    <option value="WELLSFARGOHOMEMORTGA">WELLSFARGOHOMEMORTGA</option>
+                                    <option value="CITIMORTGAGE,INC">CITIMORTGAGE,INC</option>
+                                    <option value="BRANCHBANKING&TRUSTC">BRANCHBANKING&amp;TRUSTC</option>
+                                    <option value="ABNAMROMTGEGROUP,INC">ABNAMROMTGEGROUP,INC</option>
+                                    <option value="NATIONSTARMTGELLC">NATIONSTARMTGELLC</option>
+                                    <option value="PROVIDENTFUNDINGASSO">PROVIDENTFUNDINGASSO</option>
+                                    <option value="NATLCITYMTGECO">NATLCITYMTGECO</option>
+                                    <option value="CHASEMTGECO">CHASEMTGECO</option>
+                                    <option value="WASHINGTONMUTUALBANK">WASHINGTONMUTUALBANK</option>
+                                    <option value="SUNTRUSTMORTGAGE,INC">SUNTRUSTMORTGAGE,INC</option>
+                                    <option value="CHASEHOMEFINANCELLC">CHASEHOMEFINANCELLC</option>
+                                    <option value="COUNTRYWIDE">COUNTRYWIDE</option>
+                                    <option value="PRINCIPALRESIDENTIAL">PRINCIPALRESIDENTIAL</option>
+                                    <option value="FIFTHTHIRDBANK">FIFTHTHIRDBANK</option>
+                                    <option value="PNCBANK,NATL">PNCBANK,NATL</option>
+                                    <option value="QUICKENLOANINC">QUICKENLOANINC</option>
+                                    <option value="CALIBERHOMELOANS,INC">CALIBERHOMELOANS,INC</option>
+                                    <option value="BACHOMELOANSERVICING">BACHOMELOANSERVICING</option>
+                                    <option value="GMACMORTGAGE,LLC">GMACMORTGAGE,LLC</option>
+                                    <option value="FIFTHTHIRDMTGECO">FIFTHTHIRDMTGECO</option>
+                                    <option value="TAYLOR,BEAN&WHITAKER">TAYLOR,BEAN&amp;WHITAKER</option>
+                                    <option value="PINGORALOANSERVICING">PINGORALOANSERVICING</option>
+                                    <option value="CHASEMANHATTANMTGECO">CHASEMANHATTANMTGECO</option>
+                                    <option value="LAKEVIEWLOANSERVICIN">LAKEVIEWLOANSERVICIN</option>
+                                    <option value="PHHMTGECORP">PHHMTGECORP</option>
+                                    <option value="PENNYMACCORP">PENNYMACCORP</option>
+                                    <option value="GMACMTGECORP">GMACMTGECORP</option>
+                                    <option value="FRANKLINAMERICANMTGE">FRANKLINAMERICANMTGE</option>
+                                    <option value="ALLYBANK">ALLYBANK</option>
+                                    <option value="ARVESTCENTRALMTGECO">ARVESTCENTRALMTGECO</option>
+                                    <option value="SENECAMTGESERVICING,">SENECAMTGESERVICING,</option>
+                                    <option value="OCWENLOANSERVICING,L">OCWENLOANSERVICING,L</option>
+                                    <option value="METLIFEHOMELOANS,ADI">METLIFEHOMELOANS,ADI</option>
+                                    <option value="PNCMTGESERVICES,INC">PNCMTGESERVICES,INC</option>
+                                    <option value="UNIONSAVINGSBANK">UNIONSAVINGSBANK</option>
+                                    <option value="AMERIHOMEMTGECOMPANY">AMERIHOMEMTGECOMPANY</option>
+                                    <option value="STEARNSLENDING,LLC">STEARNSLENDING,LLC</option>
+                                    <option value="DITECHFINANCIALLLC">DITECHFINANCIALLLC</option>
+                                    <option value="FTMTGESERVICES,INC">FTMTGESERVICES,INC</option>
+                                    <option value="UNITEDSHOREFINANCIAL">UNITEDSHOREFINANCIAL</option>
+                                    <option value="HOMESIDELENDING,INC">HOMESIDELENDING,INC</option>
+                                    <option value="BAMORTGAGE,LLC">BAMORTGAGE,LLC</option>
+                                    <option value="MATRIXFINANCIALSERVI">MATRIXFINANCIALSERVI</option>
+                                    <option value="FLAGSTARCAPITALMARKE">FLAGSTARCAPITALMARKE</option>
+                                    <option value="CENTRALMTGECO">CENTRALMTGECO</option>
+                                    <option value="ROUNDPOINTMTGESERVIC">ROUNDPOINTMTGESERVIC</option>
+                                    <option value="HSBCMTGECORPUSA">HSBCMTGECORPUSA</option>
+                                    <option value="OLDKENTMTGECO">OLDKENTMTGECO</option>
+                                    <option value="FLAGSTARBANK,FSB">FLAGSTARBANK,FSB</option>
+                                    <option value="CENDANTMTGECORPORATI">CENDANTMTGECORPORATI</option>
+                                    <option value="FREMONTBANK">FREMONTBANK</option>
+                                    <option value="REGIONSBANKDBAREGION">REGIONSBANKDBAREGION</option>
+                                    <option value="COLONIALSAVINGS,FA">COLONIALSAVINGS,FA</option>
+                                    <option value="MARIXSERVICINGLLC">MARIXSERVICINGLLC</option>
+                                    <option value="USAAFEDSAVINGSBANK">USAAFEDSAVINGSBANK</option>
+                                    <option value="COLORADOFEDSAVINGSBA">COLORADOFEDSAVINGSBA</option>
+                                    <option value="RESIDENTIALCREDITSOL">RESIDENTIALCREDITSOL</option>
+                                    <option value="SPECIALIZEDLOANSERVI">SPECIALIZEDLOANSERVI</option>
+                                    <option value="WASHINGTONMUTUALHOME">WASHINGTONMUTUALHOME</option>
+                                    <option value="FIRSTKEYMTGELLC">FIRSTKEYMTGELLC</option>
+                                    <option value="RUSHMORELOANMANAGMEN">RUSHMORELOANMANAGMEN</option>
+                                    <option value="IMPACMTGECORP">IMPACMTGECORP</option>
+                                    <option value="SANTANDERBANK,NA">SANTANDERBANK,NA</option>
+                                    <option value="STONEGATEMTGECORP">STONEGATEMTGECORP</option>
+                                    <option value="FREEDOMMTGECORP">FREEDOMMTGECORP</option>
+                                    <option value="LOANDEPOTCOM,LLC">LOANDEPOTCOM,LLC</option>
+                                    <option value="AMTRUSTBANK">AMTRUSTBANK</option>
+                                    <option value="FIRSTNATIONWIDEMTGEC">FIRSTNATIONWIDEMTGEC</option>
+                                </select>
+                            
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="thumb">
+                                
+                                <a id="pred_lr" href="#" class="thumbnail">
+                                  <p>Linear Regression</p>
+                                  <img src="static/lr.png" alt="Neural Network">
+                                </a>
+                            </div>
+                            <div class="thumb">
+                                <a id="pred_df" href="#" class="thumbnail">
+                                    <p>Boosted Decision Tree</p>
+                                  <img src="static/dt.png" alt="Decision Tree">
+                                </a>
+
+                            </div>
+                            <div class="thumb">
+                                
+                                <a id="pred_nn" href="#" class="thumbnail">
+                                    <p>Neural Network</p>
+                                  <img src="static/nn.png" alt="Neural Network">
+                                </a>
+                            </div>
+                            
+                        </div>
+                        <div class="col-lg-6">
+                            <div id="rbody">
+                                <h4 id ="pretext"></h4>
+                                <h4 id="algorithm"></h4>
+                                <h3 id="result"></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        <!--Body Wrapper ends-->
+        
+        
+        
+    </div>
+    <!--End of Wrapper div-->
+    
+    
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="static/antixss.js" type="text/javascript"></script>
+
+    <script>
+        
+        function validate(){
+            
+            var credit_score = $('#frm_credit_score').val();
+            var og_loan_term = $('#frm_loan_term').val();
+            var first_time_home_buyer = $('input[name="frm_first_time_home_buyer"]:checked').val();
+            var og_upb = $('#frm_og_upb').val();
+            var og_quarter_year = $('#frm_og_quarter').val().concat($('#frm_og_year').val());
+            var og_seller_name = $('#frm_seller_name option:selected').val();
+            var og_servicer_name = $('#frm_servicer_name option:selected').val();
+            floatregex="^[+]?([0-9]+(?:[\\.][0-9]*)?|\\.[0-9]+)$";
+            if(credit_score.match(floatregex)&&(og_quarter_year!="")&&(og_servicer_name!="")&&(first_time_home_buyer!="")&&og_loan_term.match(floatregex)&&og_upb.match(floatregex)&&(credit_score>=301)&&(credit_score<=850)){
+                return true;
+            }
+            if((credit_score<301)||(credit_score>850)){
+               alert("Credit Score must be numeric and between 301 - 850");
+                $('#pretext').html("");
+                $('#result').html("");
+            }
+            else{
+                alert("All Fields Must be entered and must be positive numeric.");
+                 $('#pretext').html("");
+                $('#result').html("");
+            }
+            return false;
+        }
+        function validateAndReturn(algoType){
+            JSON.stringify({name: name })
+            var credit_score = $('#frm_credit_score').val();
+            var og_loan_term = $('#frm_loan_term').val();
+            var og_first_time_home_buyer = $('input[name="frm_first_time_home_buyer"]:checked').val();
+            var og_upb = $('#frm_og_upb').val();
+            var og_quarter_year = $('#frm_og_quarter').val().concat($('#frm_og_year').val());
+            var og_seller_name = $('#frm_seller_name option:selected').val();
+            var og_servicer_name = $('#frm_servicer_name option:selected').val();
+            
+            floatregex="([0-9]*[.])?[0-9]+";
+            if (validate()==true){
+                return JSON.stringify({algoType:algoType,credit_score: credit_score,og_upb:og_upb,og_first_time_home_buyer:og_first_time_home_buyer,og_loan_term:og_loan_term, og_quarter_year:og_quarter_year,og_seller_name:og_seller_name,og_servicer_name:og_servicer_name});
+            }
+            else return null;
+            
+        }
+        
+        //Event Handler for Clicking Neural Network
+        $("#pred_nn").click(function(e){
+            //alert($("#frm_credit_score").val());
+            var jsonstring=validateAndReturn("pred_nn");
+            if(jsonstring!=null){
+                $.ajax({
+				  method: "POST",
+				  url: "/prediction/getPrediction",
+				  contentType: "application/json",
+				  data: jsonstring
+				})
+                .done(function(data) {
+                    var json_obj = JSON.parse(data);
+                    $('#pretext').html("Predicted Interest Rate using");
+                    $('#algorithm').html("Neural Network")
+                    $('#result').html(json_obj["predicted_interest_rate"]);
+                });
+            }
+            else{
+                $('#algorithm').html("Request could not be completed")
+            }
+            
+        });
+        
+        //Event Handler for Logistic Regression
+        $("#pred_lr").click(function(e){
+            //alert($("#frm_credit_score").val());
+            var jsonstring=validateAndReturn("pred_lr");
+            if(jsonstring!=null){
+                $.ajax({
+				  method: "POST",
+				  url: "/prediction/getPrediction",
+				  contentType: "application/json",
+				  data: jsonstring
+				})
+                .done(function(data) {
+                    var json_obj = JSON.parse(data);
+                    $('#pretext').html("Predicted Interest Rate using");
+                    $('#algorithm').html("Linear Regression")
+                    $('#result').html(json_obj["predicted_interest_rate"]);
+                });
+            }
+            else{
+                $('#algorithm').html("Request could not be completed")
+            }
+            
+        });
+        
+        //Event Handler for Decision Forest
+        $("#pred_df").click(function(e){
+            //alert($("#frm_credit_score").val());
+            var jsonstring=validateAndReturn("pred_df");
+            if(jsonstring!=null){
+                $.ajax({
+				  method: "POST",
+				  url: "/prediction/getPrediction",
+				  contentType: "application/json",
+				  data: jsonstring
+				})
+                .done(function(data) {
+                    var json_obj = JSON.parse(data);
+                    $('#pretext').html("Predicted Interest Rate using");
+                    $('#algorithm').html("Decision Tree")
+                    $('#result').html(json_obj["predicted_interest_rate"]);
+                });
+            }
+            else{
+                $('#algorithm').html("Request could not be completed")
+            }
+            
+        });
+        
+    	//Submit data when enter key is pressed
+        $('#user_name').keydown(function(e) {
+        	var name = $('#user_name').val();
+            if (e.which == 13 && name.length > 0) { //catch Enter key
+            	//POST request to API to create a new visitor entry in the database
+                $.ajax({
+				  method: "POST",
+				  url: "./api/visitors",
+				  contentType: "application/json",
+				  data: JSON.stringify({name: name })
+				})
+                .done(function(data) {
+                    $('#response').html(AntiXSS.sanitizeInput(data));
+                    $('#nameInput').hide();
+                    getNames();
+                });
+            }
+        });
+
+        //Retreive all the visitors from the database
+        function getNames(){
+          $.get("./api/visitors")
+              .done(function(data) {
+                  if(data.length > 0) {
+                    data.forEach(function(element, index) {
+                      data[index] = AntiXSS.sanitizeInput(element)
+                    });
+                    $('#databaseNames').html("Database contents: " + JSON.stringify(data));
+                  }
+              });
+          }
+
+          //Call getNames on page load.
+          getNames();
+
+
+    </script>
+</body>
+
+</html>

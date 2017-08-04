@@ -1,0 +1,30 @@
+{
+	"classification":{
+		"decisionjungle":{
+			"apikey":"",
+			"url":"https://ussouthcentral.services.azureml.net/workspaces/d7b83ef94e7c4da5ab1a77ebdd7253bd/services/f42e205489df40f5a468cba9113648f5/execute?api-version=2.0&details=true"
+		},
+		"logisticregression":{
+			"apikey":"",
+			"url":"https://ussouthcentral.services.azureml.net/workspaces/d7b83ef94e7c4da5ab1a77ebdd7253bd/services/1d0bdee381b14b7d899a4b728836cbd7/execute?api-version=2.0&details=true"
+		},
+		"bayestwopoint":{
+			"apikey":"",
+			"url":"https://ussouthcentral.services.azureml.net/workspaces/d7b83ef94e7c4da5ab1a77ebdd7253bd/services/c86d4108d8c541abbb35b23bc341ee19/execute?api-version=2.0&details=true"
+		}
+	},
+	"prediction":{
+		"boosteddecisiontree":{
+			"apikey":"",
+			"url":"https://ussouthcentral.services.azureml.net/workspaces/43247f6706b64e68a8b7d22ff16a2a4f/services/89403771d86f46e887c4d27b6eb80908/execute?api-version=2.0&details=true"
+		},
+		"linearregression":{
+			"apikey":"",
+			"url":"https://ussouthcentral.services.azureml.net/workspaces/43247f6706b64e68a8b7d22ff16a2a4f/services/1f553c369b314b9dad2097ff5c012200/execute?api-version=2.0&details=true"
+		},
+		"neuralnetwork":{
+			"apikey":"",
+			"url":"https://ussouthcentral.services.azureml.net/workspaces/43247f6706b64e68a8b7d22ff16a2a4f/services/964b03c9c6fa480ca1156bd093eb9ff4/execute?api-version=2.0&details=true"
+		}
+	}
+}
