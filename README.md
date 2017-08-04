@@ -1,4 +1,4 @@
-### Deploying Machine Learning Services on Cloud
+# Deploying Machine Learning Services on Cloud
 ### Assignment 3
 ### Team 1 - Manasi Dalvi & Vishal Satam
 
@@ -11,7 +11,7 @@ The docker image has been created for preprocessing the data from Freddie Mac's 
 Pull the image
 ```
 docker pull vishalsatam1988/assignment3
-
+```
 Run the summarization script
 ```
 docker run -it vishalsatam1988/assignment3 sh /src/assignment3/downloadAndClean.sh "<username>" "<password>" <startyear> <endyear>
