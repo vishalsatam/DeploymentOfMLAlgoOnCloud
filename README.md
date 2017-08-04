@@ -2,7 +2,7 @@
 ### Assignment 3
 ### Team 1 - Manasi Dalvi & Vishal Satam
 
-This project has been created to deploy the classification and prediction algorithms that we have developed for the Fredie Mac's dataset. More details available on the github URL :  https://github.com/vishalsatam/PredictiveModellingOnFreddieMacLoans
+This project has been created to deploy the classification and prediction algorithms that we have developed for the Fredie Mac's dataset. More details available on the github URL :  https://github.com/vishalsatam/PredictiveModellingOnFreddieMacLoans  You will require login credentials from Freddie Mac's Single Family Loans dataset http://www.freddiemac.com/research/datasets/sf_loanlevel_dataset.html in order to execute the below docker image.
 
 ## Docker Image
 
@@ -36,4 +36,4 @@ View results in Jupyter Notebook - Open /src/assignment3/RandomUnderSampling.ipy
 docker run -it -d -p 8888:8888 vishalsatam1988/assignment3 /bin/bash -c 'jupyter notebook --no-browser --allow-root --ip=* --NotebookApp.password="$PASSWD" "$@"'
 ```
 
-### Instructions for building Web application have been given in the Flask directory
+### Instructions for building Web application have been given in the Flask Application folder
